@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDKode</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>BDKode - Empresa de Sistemas</h1>
+        <p>Data: 20/08/2026</p>
+        <p>Local: Senai</p>
+    </header>
+
+    <nav>
+        <a href="#funcionamento">Horário de Funcionamento</a>
+        <a href="#projetos">Projetos já realizados</a>
+        <a href="#contato">Entre em contato</a>
+    </nav>
+
+    <main>
+        <section id="funcionamento">
+            <h2>Horário de Funcionamento</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dias Úteis</th>
+                        <th>Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7:00 - 12:00</td>
+                        <td>7:00 - 12:00</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>13:00 - 17:00</td>
+                        <td>13:00 - 17:00</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>18:00 - 22:00</td>
+                        <td>Indisponível</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+        <br>
+        <section id="palestrantes">
+            <article>
+                <h2>BDKode</h2>
+             *ERRO AQUI*
+                <P>Desenvolva o Sistema que desejar</P>
+            </article>
+            <aside>CEO: Yuri Budke</aside>
+        </section>
+
+        <section id="contato">
+            <h2>Informe suas informações para entrarmos em contato</h2>
+            <form action="/entreContato" method="post">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <br><br>
+
+                <label for="numero">Numero de Telefone:</label>
+                <input type="tel" id="numero" name="numero" required>
+
+                <br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <br><br>
+
+                <label for="desenvolvimento">Desenvolvimento desejado:</label>
+                <select name="desenvolvimento" id="desenvolvimento">
+                    <option>Sistema</option>
+                    <option>Plataforma de Vendas</option>
+                    <option>Plataforma de Visualização</option>
+                </select>
+
+                <br><br>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Sua ideia é o começo. Nossa tecnologia transforma ela em realidade.</p>
+    </footer>
+
+</body>
+
+</html>
