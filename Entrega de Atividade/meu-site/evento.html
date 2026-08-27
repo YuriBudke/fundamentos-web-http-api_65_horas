@@ -1,85 +1,383 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+    <!-- Define a codificação de caracteres da página -->
     <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar a diferentes tamanhos de tela -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charlie Brown</title>
+
+    <!-- Define o título que aparece na aba do navegador -->
+    <title>Charlie Brown Jr.</title>
 </head>
+
 <body>
 
+    <!--
+        HEADER:
+        Representa o cabeçalho da página.
+        Aqui colocamos o título principal e uma descrição do evento.
+    -->
     <header>
-        <h1>Charline Brown Jr em Blumenau</h1>
+
+        <!-- Título principal da página -->
+        <h1>Charlie Brown Jr. em Blumenau</h1>
+
+        <!-- Texto complementar ao título -->
         <p>Reveja um dos maiores nomes do Rock Brasileiro</p>
+
     </header>
 
+
+    <!--
+        NAV:
+        Contém os links de navegação da página.
+        Cada link aponta para uma seção através do atributo "id".
+    -->
     <nav>
+
+        <!-- Leva até a seção que possui id="data" -->
         <a href="#data">Data</a>
+
+        <!-- Leva até a seção que possui id="local" -->
         <a href="#local">Localidade</a>
+
+        <!-- Leva até a seção que possui id="ingresso" -->
         <a href="#ingresso">Ingressos</a>
+
     </nav>
 
+
+    <!--
+        MAIN:
+        Representa o conteúdo principal da página.
+        Dentro dele estão as informações do evento,
+        valores dos ingressos e formulário de compra.
+    -->
     <main>
+
+
+        <!--
+            SECTION:
+            Cria uma seção específica para as informações
+            relacionadas à data e ao horário do show.
+
+            O id="data" permite que o link:
+            <a href="#data">
+            encontre esta seção.
+        -->
         <section id="data">
+
+            <!-- Título da seção -->
+            <h2>Data do Show</h2>
+
+
+            <!--
+                ARTICLE:
+                Representa um conteúdo independente dentro da seção.
+                Neste caso, contém as informações de data e horário.
+            -->
             <article>
-                <h2>Data do Show</h2>
+
+                <!-- Subtítulo referente à data -->
+                <h3>Data</h3>
+
+                <!-- Data do evento -->
                 <p>19/09/2026</p>
+
+
+                <!-- Subtítulo referente ao horário -->
+                <h3>Horário</h3>
+
+                <!-- Horário do evento -->
                 <p>22:30 às 5:00</p>
+
             </article>
+
+
+            <!--
+                ASIDE:
+                Contém uma informação complementar ao conteúdo principal.
+                Aqui usamos para colocar um aviso aos participantes.
+            -->
             <aside>
-                <p>Chegue cedo e garanta um lugar perto do Palco.</p>
+
+                <!-- Aviso para os participantes -->
+                <p>Chegue cedo e garanta um lugar perto do palco.</p>
+
             </aside>
+
         </section>
 
-        <br>
 
-        <section>
+        <!--
+            SECTION:
+            Cria uma seção para informar o local do evento.
+
+            O id="local" permite que o link da navegação
+            encontre esta seção.
+        -->
+        <section id="local">
+
+            <!-- Título da seção -->
+            <h2>Localidade</h2>
+
+            <!-- Local onde o evento acontecerá -->
+            <p>Blumenau - SC</p>
+
+        </section>
+
+
+        <!--
+            SECTION:
+            Contém a tabela com os valores dos ingressos.
+        -->
+        <section id="valores">
+
+            <!-- Título da seção -->
             <h2>Valores dos Ingressos</h2>
+
+
+            <!--
+                TABLE:
+                Cria uma tabela para organizar os preços
+                de cada tipo de ingresso.
+            -->
             <table>
+
+
+                <!--
+                    THEAD:
+                    Representa o cabeçalho da tabela.
+                -->
                 <thead>
+
                     <tr>
-                        <th></th>
-                        <th>Pista</th>
-                        <th>Vip</th>
-                        <th>Open Bar</th>
+
+                        <!-- Cabeçalho da primeira coluna -->
+                        <th scope="col">Tipo</th>
+
+                        <!-- Cabeçalho das demais colunas -->
+                        <th scope="col">Pista</th>
+                        <th scope="col">VIP</th>
+                        <th scope="col">Open Bar</th>
+
                     </tr>
+
                 </thead>
+
+
+                <!--
+                    TBODY:
+                    Contém os dados principais da tabela.
+                -->
                 <tbody>
+
+                    <!-- Primeira linha de dados -->
                     <tr>
-                        <th>Inteira</th>
-                        <td>R$80,00</td>
-                        <td>R$120,00</td>
-                        <td>R$200,00</td>
+
+                        <!-- Nome do tipo de ingresso -->
+                        <th scope="row">Inteira</th>
+
+                        <!-- Preço da entrada inteira -->
+                        <td>R$ 80,00</td>
+
+                        <!-- Preço do ingresso VIP -->
+                        <td>R$ 120,00</td>
+
+                        <!-- Preço do ingresso Open Bar -->
+                        <td>R$ 200,00</td>
+
                     </tr>
-                </tbody>
-                <tbody>
+
+
+                    <!-- Segunda linha de dados -->
                     <tr>
-                        <th>Meia Entrada</th>
-                        <td>R$40,00</td>
-                        <td>R$60,00</td>
-                        <td>R$100,00</td>
+
+                        <!-- Nome do tipo de ingresso -->
+                        <th scope="row">Meia Entrada</th>
+
+                        <!-- Preço da meia entrada Pista -->
+                        <td>R$ 40,00</td>
+
+                        <!-- Preço da meia entrada VIP -->
+                        <td>R$ 60,00</td>
+
+                        <!-- Preço da meia entrada Open Bar -->
+                        <td>R$ 100,00</td>
+
                     </tr>
+
                 </tbody>
+
             </table>
+
         </section>
-        
+
+
+        <!--
+            SECTION:
+            Cria a seção responsável pela compra dos ingressos.
+        -->
         <section id="ingresso">
-            <h2>Compre seu integrasso</h2>
+
+            <!-- Título da seção -->
+            <h2>Compre seu ingresso</h2>
+
+
+            <!--
+                FORM:
+                Cria um formulário para o usuário preencher.
+
+                action:
+                Define para onde os dados serão enviados.
+
+                method="post":
+                Define que os dados serão enviados através
+                do método HTTP POST.
+            -->
             <form action="/comprarIngresso" method="post">
 
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" type="nome">
 
+                <!--
+                    LABEL:
+                    Texto que identifica o campo.
+
+                    for="nome":
+                    Relaciona o label ao input que possui
+                    id="nome".
+                -->
+                <label for="nome">Nome:</label>
+
+
+                <!--
+                    INPUT:
+                    Campo onde o usuário informa o nome.
+
+                    type="text":
+                    Define que é um campo de texto.
+
+                    id="nome":
+                    Identifica o campo dentro do HTML.
+
+                    name="nome":
+                    Define o nome da informação que será enviada
+                    pelo formulário.
+
+                    required:
+                    Torna o preenchimento obrigatório.
+                -->
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                >
+
+
+                <!--
+                    BR:
+                    Faz uma quebra de linha.
+
+                    Os dois <br> são utilizados aqui para
+                    separar visualmente os campos.
+                -->
                 <br><br>
 
-                <label for="nome">Nome</label>
-                <input type="text" id="cpf" type="cpf">
 
-                
+                <!-- Label do campo CPF -->
+                <label for="cpf">CPF:</label>
+
+
+                <!--
+                    Campo para o usuário informar o CPF.
+                -->
+                <input
+                    type="text"
+                    id="cpf"
+                    name="cpf"
+                    required
+                >
+
+
+                <!-- Quebra de linha e espaço visual -->
+                <br><br>
+
+
+                <!--
+                    LABEL:
+                    Identifica o campo de seleção do tipo de ingresso.
+                -->
+                <label for="tipoIngresso">Tipo do ingresso:</label>
+
+
+                <!--
+                    SELECT:
+                    Cria uma lista de opções para o usuário escolher.
+                -->
+                <select
+                    name="tipoIngresso"
+                    id="tipoIngresso"
+                    required
+                >
+
+                    <!--
+                        Primeira opção.
+                        value="" significa que nenhum ingresso
+                        foi selecionado.
+                    -->
+                    <option value="">Selecione</option>
+
+
+                    <!-- Opção de ingresso Pista -->
+                    <option value="pista">Pista</option>
+
+
+                    <!-- Opção de ingresso VIP -->
+                    <option value="vip">VIP</option>
+
+
+                    <!-- Opção de ingresso Open Bar -->
+                    <option value="open-bar">Open Bar</option>
+
+                </select>
+
+
+                <!-- Quebra de linha e espaço visual -->
+                <br><br>
+
+
+                <!--
+                    BUTTON:
+                    Cria o botão que envia o formulário.
+
+                    type="submit":
+                    Indica que o botão deve enviar os dados
+                    preenchidos no formulário.
+                -->
+                <button type="submit">Comprar ingresso</button>
 
             </form>
+
         </section>
 
     </main>
-    
+
+
+    <!--
+        FOOTER:
+        Representa o rodapé da página.
+        Normalmente contém informações adicionais,
+        direitos autorais, contatos etc.
+    -->
+    <footer>
+
+        <!-- Texto exibido no rodapé -->
+        <p>Site que só existe em sonhos</p>
+
+    </footer>
+
 </body>
+
 </html>
