@@ -1,237 +1,172 @@
-/* Configurações gerais */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #111;
-    color: #eee;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #eeeeee;
 }
 
-/* Cabeçalho */
 header {
-    background-color: #f2c400;
-    color: #111;
+    padding: 8vh 5vw;
+    background-color: #1c1c1c;
     text-align: center;
-    padding: 50px 20px;
-    border-bottom: 8px solid #d71920;
+    border-bottom: 4px solid #d62828;
 }
 
-header h1 {
+#titulo-principal {
     margin: 0;
-    font-size: 40px;
+    color: #d62828;
+    font-size: 2.5rem;
     text-transform: uppercase;
-    font-weight: bold;
 }
 
 header p {
-    font-size: 18px;
-    margin-top: 10px;
+    color: #cccccc;
+    font-size: 1.1rem;
 }
 
-/* Menu */
 nav {
-    background-color: #1c1c1c;
+    padding: 15px;
+    background-color: #080808;
     text-align: center;
-    padding: 18px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
 nav a {
-    color: #f2c400;
+    margin: 0 15px;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 20px;
-    text-transform: uppercase;
 }
 
 nav a:hover {
-    color: #fff;
-    border-bottom: 2px solid #d71920;
+    color: #d62828;
 }
 
-/* Conteúdo principal */
 main {
-    width: 90%;
+    width: 85%;
     max-width: 1000px;
     margin: 30px auto;
 }
 
-/* Seções */
-section {
+.card {
+    margin-bottom: 25px;
+    padding: 25px;
     background-color: #1e1e1e;
-    margin-bottom: 30px;
-    padding: 30px;
-    border-left: 6px solid #f2c400;
+    border-left: 4px solid #d62828;
     border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 section h2 {
-    color: #f2c400;
-    margin-top: 0;
-    text-transform: uppercase;
+    color: #d62828;
+    border-bottom: 1px solid #444444;
+    padding-bottom: 8px;
 }
 
-/* Artigo */
-article {
-    background-color: #292929;
-    padding: 20px;
-    border-radius: 5px;
+#data article {
+    display: flex;
+    gap: 50px;
 }
 
-article h3 {
-    color: #d71920;
+#data article h3 {
+    color: #aaaaaa;
     margin-bottom: 5px;
 }
 
-article p {
-    font-size: 18px;
-    margin-top: 5px;
-}
-
-/* Aviso */
-aside {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #d71920;
-    color: white;
+#data article p {
+    color: #ffffff;
+    font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 5px;
 }
 
-/* Tabela */
+#data aside {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #292929;
+    color: #cccccc;
+}
+
+#local p {
+    font-size: 1.2rem;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    background-color: #1e1e1e;
 }
 
 th,
 td {
-    padding: 15px;
+    padding: 12px;
+    border: 1px solid #444444;
     text-align: center;
-    border: 1px solid #444;
 }
 
-thead {
-    background-color: #f2c400;
-    color: #111;
+th {
+    background-color: #d62828;
+    color: #ffffff;
 }
 
 tbody tr:nth-child(even) {
     background-color: #292929;
 }
 
-tbody tr:nth-child(odd) {
-    background-color: #222;
-}
-
-tbody tr:hover {
-    background-color: #333;
-}
-
-/* Formulário */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 6px;
-    font-weight: bold;
-    color: #f2c400;
-}
-
-input,
-select {
-    padding: 12px;
-    background-color: #292929;
-    color: white;
-    border: 1px solid #555;
+.campo {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #111111;
+    color: #ffffff;
+    border: 1px solid #555555;
     border-radius: 4px;
-    font-size: 16px;
 }
 
-input:focus,
-select:focus {
+.campo:focus {
+    border-color: #d62828;
     outline: none;
-    border-color: #f2c400;
 }
 
-/* Botão */
 button {
-    padding: 14px;
-    background-color: #d71920;
-    color: white;
+    padding: 12px;
+    background-color: #d62828;
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    text-transform: uppercase;
 }
 
 button:hover {
-    background-color: #f2c400;
-    color: #111;
+    background-color: #a51f1f;
 }
 
-/* Link do YouTube */
-section a {
-    color: #f2c400;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-section a:hover {
-    color: #d71920;
-    text-decoration: underline;
-}
-
-/* Rodapé */
-footer {
-    background-color: #080808;
-    color: #aaa;
+main > section:last-child {
     text-align: center;
-    padding: 25px;
-    border-top: 4px solid #f2c400;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
+main > section:last-child a {
+    color: #d62828;
+    font-weight: bold;
+}
 
-    header h1 {
-        font-size: 28px;
+footer {
+    padding: 20px;
+    background-color: #080808;
+    color: #999999;
+    text-align: center;
+    border-top: 2px solid #d62828;
+}
+
+@media (max-width: 600px) {
+    #titulo-principal {
+        font-size: 2rem;
+    }
+
+    #data article {
+        display: block;
     }
 
     nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    main {
-        width: 95%;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    table {
-        font-size: 13px;
-    }
-
-    th,
-    td {
-        padding: 8px;
+        margin: 0 7px;
     }
 }

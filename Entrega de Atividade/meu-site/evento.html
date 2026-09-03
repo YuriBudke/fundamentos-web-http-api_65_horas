@@ -8,12 +8,11 @@
     <!-- Faz a página se adaptar a diferentes tamanhos de tela -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Conecta o arquivo CSS externo -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Define o título que aparece na aba do navegador -->
     <title>Charlie Brown Jr.</title>
-
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -26,7 +25,7 @@
     <header>
 
         <!-- Título principal da página -->
-        <h1>Charlie Brown Jr. em Blumenau</h1>
+        <h1 id="titulo-principal">Charlie Brown Jr. em Blumenau</h1>
 
         <!-- Texto complementar ao título -->
         <p>Reveja um dos maiores nomes do Rock Brasileiro</p>
@@ -67,11 +66,11 @@
             Cria uma seção específica para as informações
             relacionadas à data e ao horário do show.
 
-            O id="data" permite que o link:
-            <a href="#data">
+            A classe "card" é reutilizada em outras seções.
+            O id="data" permite que o link da navegação
             encontre esta seção.
         -->
-        <section id="data">
+        <section id="data" class="card">
 
             <!-- Título da seção -->
             <h2>Data do Show</h2>
@@ -119,10 +118,10 @@
             SECTION:
             Cria uma seção para informar o local do evento.
 
-            O id="local" permite que o link da navegação
-            encontre esta seção.
+            A classe "card" é reutilizada para manter
+            o mesmo estilo visual das outras seções.
         -->
-        <section id="local">
+        <section id="local" class="card">
 
             <!-- Título da seção -->
             <h2>Localidade</h2>
@@ -137,7 +136,7 @@
             SECTION:
             Contém a tabela com os valores dos ingressos.
         -->
-        <section id="valores">
+        <section id="valores" class="card">
 
             <!-- Título da seção -->
             <h2>Valores dos Ingressos</h2>
@@ -224,7 +223,7 @@
             SECTION:
             Cria a seção responsável pela compra dos ingressos.
         -->
-        <section id="ingresso">
+        <section id="ingresso" class="card">
 
             <!-- Título da seção -->
             <h2>Compre seu ingresso</h2>
@@ -269,18 +268,18 @@
                     Define o nome da informação que será enviada
                     pelo formulário.
 
+                    class="campo":
+                    Aplica o estilo visual reutilizável aos campos.
+
                     required:
                     Torna o preenchimento obrigatório.
                 -->
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" class="campo" required>
 
 
                 <!--
                     BR:
                     Faz uma quebra de linha.
-
-                    Os dois <br> são utilizados aqui para
-                    separar visualmente os campos.
                 -->
                 <br><br>
 
@@ -291,8 +290,9 @@
 
                 <!--
                     Campo para o usuário informar o CPF.
+                    A classe "campo" é reutilizada.
                 -->
-                <input type="text" id="cpf" name="cpf" required>
+                <input type="text" id="cpf" name="cpf" class="campo" required>
 
 
                 <!-- Quebra de linha e espaço visual -->
@@ -309,8 +309,11 @@
                 <!--
                     SELECT:
                     Cria uma lista de opções para o usuário escolher.
+
+                    A classe "campo" também é utilizada aqui,
+                    demonstrando a reutilização da mesma classe.
                 -->
-                <select name="tipoIngresso" id="tipoIngresso" required>
+                <select name="tipoIngresso" id="tipoIngresso" class="campo" required>
 
                     <!--
                         Primeira opção.
@@ -352,10 +355,21 @@
 
         </section>
 
-        <section>
-            <!-- Link para um vídeo no YouTube -->
+
+        <!--
+            SECTION:
+            Contém um link para um vídeo relacionado ao evento.
+        -->
+        <section class="card">
+
+            <!-- Título da seção -->
             <h2>Reveja o Chorão da Vila Germânica</h2>
-            <a href="https://www.youtube.com/watch?v=aRTM7b2-L70">Clique aqui</a>
+
+            <!-- Link para um vídeo no YouTube -->
+            <a href="https://www.youtube.com/watch?v=aRTM7b2-L70">
+                Clique aqui
+            </a>
+
         </section>
 
     </main>
