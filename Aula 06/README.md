@@ -26,7 +26,7 @@ Pense no Grid como uma estante:
 .container {
   display: grid;
   grid-template-columns: 200px 200px 200px;
-}
+ }
 ```
 
 Isso cria três colunas, cada uma com `200px`.
