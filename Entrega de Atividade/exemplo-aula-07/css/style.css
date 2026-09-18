@@ -1,0 +1,39 @@
+.pagina{
+    display: grid;
+
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr 80px;
+
+    grid-template-areas:
+    "cabecalho cabecalho"
+    "menu conteudo"
+    "rodape rodape";
+
+    min-height: 100vh;
+    gap: 10px;
+}
+
+header{
+    grid-area: cabecalho;
+    background-color: blue;
+    color: aliceblue;
+}
+
+nav{
+    grid-area: menu;
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+main{
+    grid-area: conteudo;
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+footer{
+    grid-area: rodape;
+    background-color: black;
+    color: aliceblue;
+}
+
