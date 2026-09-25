@@ -1,0 +1,110 @@
+
+/*1. Configurações gerais*/
+*{
+    box-sizing: border-box;
+}
+
+/*2. Estrutura principal de página*/
+body{
+
+    /*Dimensões e espaçamentos*/
+min-height: 100vh;
+margin: 0;
+
+/*Tipografica*/
+font-family: Arial, sans-serif;
+
+/*Layout*/
+display: grid;
+grid-template-columns: 200px 1fr;
+grid-template-rows: 100px 1fr 80px;
+
+
+/*Organização das áreas*/
+grid-template-areas: 
+"cabecalho cabecalho"
+"menu conteudo"
+"rodape rodape";
+
+/*Espaçamento entre as áreas*/
+gap: 10px;
+
+}
+/*3. Cabecalho*/
+header{
+grid-area: cabecalho;
+background-color: steelblue;
+
+}
+
+/* Menu lateral*/
+nav {
+    grid-area: menu;
+    background-color: lightgray;
+}
+
+/*Conteúdo principal*/
+main{
+
+    /*Posiciona o main na área conteúdo do Grid principal*/
+    grid-area: conteudo;
+
+    /*Transforma o main em um novo Grid*/
+    display: grid;
+
+    /*
+    Cria quatro colunas de larguras iguais
+    Cada coluna ocupa uma fração do espaço disponível.
+    */
+    grid-template-columns: repeat(4, 1fr);
+
+    /*Espaço entre as linhas e as colunas*/
+    gap: 20px;
+
+    /*Espaço entre o conteúdo e as bordas do main*/
+    padding: 20px;
+
+}
+
+
+/*
+Configuração dos quatro cards
+*/
+.card{
+/*
+Cada card ocupa uma coluna
+Essa declaração é opcional porque já é 
+o comportamento padrão dos itens do Grid
+*/
+grid-column: span 1;
+
+padding: 20px;
+background-color: lightblue;
+border: 1px solid steelblue;
+border-radius: 8px;
+text-align: center;
+}
+
+
+.texto{
+    /*
+    Cada texto ocupa duas das quatro colunas
+
+    Como existem dois tesxtos:
+    2 colunas + 2 colunas = 4 colunas
+    */
+
+    grid-column: span 2;
+
+    padding: 20px;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+/*6. Rodapé*/
+footer{
+    grid-area: rodape;
+    background-color: darkslategray;
+    color: white;
+}
