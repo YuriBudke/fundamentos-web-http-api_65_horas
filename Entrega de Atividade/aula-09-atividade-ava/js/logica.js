@@ -31,7 +31,7 @@ for (let i = 1; i < numeros.length; i++) {
     }
 }
 
-console.log("O maior número é: " + maior);
+console.log("O maior número é: " , maior);
 
 
 //Nivem medio
@@ -41,11 +41,8 @@ console.log("O maior número é: " + maior);
 let nomes = ["Carlos", "Maria", "João", "Ana", "Pedro"];
 
 function contarNomes() {
-    let quantidade = nomes.length;
-
-    console.log("Quantidade de nomes: " + quantidade);
+    console.log("Quantidade de nomes: " + nomes.length);
 }
-
 contarNomes();
 
 
@@ -65,10 +62,6 @@ filtrarPares();
 
 //3
 function calcularMedia(numeros) {
-    if (numeros.length === 0) {
-        console.log("Não existem números para calcular a média.");
-        return;
-    }
 
     let soma = 0;
 
@@ -111,7 +104,7 @@ calcularMediaAlunoIndividual();
 function verificarAprovacao(media) {
     if (media >= 7) {
         console.log("Aprovado");
-    } else if (media >= 5) {
+    } else if (media <= 5) {
         console.log("Recuperação");
     } else {
         console.log("Reprovado");
