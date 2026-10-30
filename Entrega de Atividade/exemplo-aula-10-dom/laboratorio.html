@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Permite exibir corretamente acentos e outros caracteres. -->
+    <meta charset="UTF-8">
+    <!-- Adapta a área de visualização à largura do dispositivo. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório de DOM e eventos</title>
+
+    <!-- O CSS cuida da aparência. -->
+    <link rel="stylesheet" href="css/laboratorio.css">
+    <!-- defer faz este script externo executar após a análise do HTML. -->
+    <script src="js/laboratorio.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1 id="titulo">Minha casa interativa</h1>
+        <p class="descricao">Use os controles para modificar a página.</p>
+
+        <!-- O for do label corresponde ao id do input. -->
+        <label for="visitante">Seu nome:</label>
+        <input type="text" id="visitante">
+
+        <!-- type="button" indica um botão de ação comum. -->
+        <button type="button" id="btn-saudacao">Mostrar saudação</button>
+        <p id="saudacao" aria-live="polite"></p>
+        <p id="contador">Caracteres digitados: 0</p>
+
+        <button type="button" id="btn-destaque" aria-pressed="false">
+            Alternar destaque
+        </button>
+        <section id="painel" class="card">
+            <h2>Painel da casa</h2>
+            <p>Este painel pode receber destaque.</p>
+        </section>
+        <section class="card">
+            <h2>Segundo painel</h2>
+            <p>Usaremos este elemento para comparar seletores.</p>
+        </section>
+
+        <p id="mensagem">Texto original</p>
+
+        <script>
+            // Localiza o elemento cujo id é "mensagem".
+            const paragrafo = document.getElementById("mensagem");
+
+            // Altera o texto do elemento encontrado.
+            paragrafo.textContent = "Olá, turma!";
+        </script>
+
+    </main>
+</body>
+
+</html>
